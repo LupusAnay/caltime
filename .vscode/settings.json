@@ -1,0 +1,3 @@
+{
+  "haskell.serverExecutablePath": "${HOME}/.cabal/bin/haskell-language-server-8.10.5"
+}

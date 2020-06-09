@@ -1,0 +1,1298 @@
+[Trace - 11:48:33 AM] Sending request 'initialize - (1)'
+Params: {
+  "processId": null,
+  "rootUri": "file:///home/lupusanay/caltime/",
+  "capabilities": {
+    "workspace": {
+      "applyEdit": true,
+      "workspaceEdit": {
+        "documentChanges": true
+      },
+      "didChangeConfiguration": {},
+      "didChangeWatchedFiles": {
+        "dynamicRegistration": true
+      },
+      "symbol": {},
+      "executeCommand": {},
+      "workspaceFolders": false,
+      "configuration": true
+    },
+    "textDocument": {
+      "synchronization": {
+        "willSave": true,
+        "willSaveWaitUntil": true,
+        "didSave": true
+      },
+      "completion": {
+        "completionItem": {
+          "snippetSupport": true
+        }
+      },
+      "hover": {},
+      "signatureHelp": {},
+      "references": {},
+      "documentHighlight": {},
+      "formatting": {},
+      "rangeFormatting": {},
+      "onTypeFormatting": {},
+      "definition": {},
+      "codeAction": {},
+      "rename": {
+        "prepareSupport": true,
+        "dynamicRegistration": false
+      },
+      "semanticHighlightingCapabilities": {
+        "semanticHighlighting": false
+      }
+    }
+  }
+}
+
+
+[Trace - 11:48:33 AM] Received response 'initialize - (1)' in 141ms
+Result: {
+  "capabilities": {
+    "textDocumentSync": {
+      "openClose": true,
+      "change": 2,
+      "save": {}
+    },
+    "hoverProvider": true,
+    "completionProvider": {
+      "resolveProvider": false,
+      "triggerCharacters": [
+        "."
+      ]
+    },
+    "definitionProvider": true,
+    "typeDefinitionProvider": true,
+    "implementationProvider": true,
+    "documentHighlightProvider": true,
+    "documentSymbolProvider": true,
+    "codeActionProvider": true,
+    "codeLensProvider": {
+      "resolveProvider": false
+    },
+    "documentFormattingProvider": true,
+    "documentRangeFormattingProvider": true,
+    "renameProvider": false,
+    "colorProvider": false,
+    "foldingRangeProvider": false,
+    "executeCommandProvider": {
+      "commands": [
+        "17885:eval:evalCommand",
+        "17885:ghcide:typesignature.add",
+        "17885:importLens:ImportLensCommand",
+        "17885:pragmas:addPragma",
+        "17885:retrie:retrieCommand"
+      ]
+    },
+    "workspace": {
+      "workspaceFolders": {
+        "supported": true,
+        "changeNotifications": true
+      }
+    }
+  }
+}
+
+
+[Trace - 11:48:33 AM] Sending notification 'initialized'
+Params: {}
+
+
+[Trace - 11:48:33 AM] Sending notification 'textDocument/didOpen'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/app/Main.hs",
+    "languageId": "hs",
+    "version": 0,
+    "text": "module Main where\n\nimport qualified Lib (someFunc)\n\nmain :: IO ()\nmain \u003d do\n  putStrLn \"Hello, Haskell!\"\n  Lib.someFunc\n"
+  }
+}
+
+
+[Trace - 11:48:33 AM] Sending notification 'textDocument/didOpen'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs",
+    "languageId": "hs",
+    "version": 0,
+    "text": "module Lib (someFunc) where\n\nimport qualified Data.List.NonEmpty as NE\n\nsomeFunc :: IO ()\nsomeFunc \u003d do\n  let a \u003d head $ NE.fromList [\u0027a\u0027, \u0027b\u0027, \u0027c\u0027]\n  putStrLn \"fuck\""
+  }
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/lsp/log/hs_out_20200921.log",
+      "type": 3
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/lsp/log/hs_err_20201023.log",
+      "type": 3
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/lsp/log/hs_err_20200921.log",
+      "type": 3
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/lsp/log/hs_out_20201023.log",
+      "type": 3
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/lsp/log/hs_err_20201030.log",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/backend/dist-newstyle/cache/compiler",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/.git/FETCH_HEAD",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/backend/dist-newstyle/cache/plan.json",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/backend/dist-newstyle/build/x86_64-linux/ghc-8.10.1/caltime-0.1.0.0/cache/registration",
+      "type": 3
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/backend/dist-newstyle/cache/up-to-date",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/backend/dist-newstyle/cache/solver-plan",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/backend/dist-newstyle/cache/improved-plan",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/backend/dist-newstyle/cache/elaborated-plan",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/backend/dist-newstyle/packagedb/ghc-8.10.1/package.cache",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/backend/dist-newstyle/packagedb/ghc-8.10.1/caltime-0.1.0.0-inplace.conf",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/backend/dist-newstyle/build/x86_64-linux/ghc-8.10.1/caltime-0.1.0.0/setup-config",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/backend/dist-newstyle/build/x86_64-linux/ghc-8.10.1/caltime-0.1.0.0/build/libHScaltime-0.1.0.0-inplace-ghc8.10.1.so",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/backend/dist-newstyle/build/x86_64-linux/ghc-8.10.1/caltime-0.1.0.0/cache/build",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/backend/dist-newstyle/build/x86_64-linux/ghc-8.10.1/caltime-0.1.0.0/cache/config",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/backend/dist-newstyle/build/x86_64-linux/ghc-8.10.1/caltime-0.1.0.0/package.conf.inplace/package.cache",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/backend/dist-newstyle/build/x86_64-linux/ghc-8.10.1/caltime-0.1.0.0/package.conf.inplace/package.cache.lock",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/backend/dist-newstyle/build/x86_64-linux/ghc-8.10.1/caltime-0.1.0.0/x/caltime/setup-config",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/backend/dist-newstyle/build/x86_64-linux/ghc-8.10.1/caltime-0.1.0.0/x/caltime/cache/config",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/backend/dist-newstyle/build/x86_64-linux/ghc-8.10.1/caltime-0.1.0.0/x/caltime/package.conf.inplace/package.cache",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/backend/dist-newstyle/build/x86_64-linux/ghc-8.10.1/caltime-0.1.0.0/x/caltime/package.conf.inplace/package.cache.lock",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeConfiguration'
+Params: {
+  "settings": {}
+}
+
+
+[Trace - 11:48:36 AM] Sending notification 'workspace/didChangeWatchedFiles'
+Params: {
+  "changes": [
+    {
+      "uri": "file:///home/lupusanay/caltime/lsp/conf/hs.json",
+      "type": 2
+    }
+  ]
+}
+
+
+[Trace - 11:48:36 AM] Received notification 'window/logMessage'
+Params: {
+  "type": 1,
+  "message": "haskell-lsp:configuration parse error. NotificationMessage {_jsonrpc \u003d \"2.0\", _method \u003d WorkspaceDidChangeConfiguration, _params \u003d DidChangeConfigurationParams {_settings \u003d Object (fromList [])}} \"key \\\"languageServerHaskell\\\" not found\""
+}
+
+
+[Trace - 11:48:39 AM] Received request 'client/registerCapability - (0)'
+Params: {
+  "registrations": [
+    {
+      "id": "/home/lupusanay/caltime/backend/hie.yaml",
+      "method": "workspace/didChangeWatchedFiles",
+      "registerOptions": {
+        "watchers": [
+          {
+            "kind": 5,
+            "globPattern": "/home/lupusanay/caltime/backend/hie.yaml"
+          }
+        ]
+      }
+    }
+  ]
+}
+
+
+[Trace - 11:48:39 AM] Received request 'client/registerCapability - (1)'
+Params: {
+  "registrations": [
+    {
+      "id": "cabal.project",
+      "method": "workspace/didChangeWatchedFiles",
+      "registerOptions": {
+        "watchers": [
+          {
+            "kind": 5,
+            "globPattern": "cabal.project"
+          }
+        ]
+      }
+    }
+  ]
+}
+
+
+[Trace - 11:48:39 AM] Received request 'client/registerCapability - (2)'
+Params: {
+  "registrations": [
+    {
+      "id": "cabal.project.local",
+      "method": "workspace/didChangeWatchedFiles",
+      "registerOptions": {
+        "watchers": [
+          {
+            "kind": 5,
+            "globPattern": "cabal.project.local"
+          }
+        ]
+      }
+    }
+  ]
+}
+
+
+[Trace - 11:48:39 AM] Received request 'client/registerCapability - (3)'
+Params: {
+  "registrations": [
+    {
+      "id": "caltime.cabal",
+      "method": "workspace/didChangeWatchedFiles",
+      "registerOptions": {
+        "watchers": [
+          {
+            "kind": 5,
+            "globPattern": "caltime.cabal"
+          }
+        ]
+      }
+    }
+  ]
+}
+
+
+[Trace - 11:48:39 AM] Sending response 'client/registerCapability - (2)'. Processing request took 3ms
+Result: null
+
+
+[Trace - 11:48:39 AM] Sending response 'client/registerCapability - (0)'. Processing request took 5ms
+Result: null
+
+
+[Trace - 11:48:39 AM] Sending response 'client/registerCapability - (3)'. Processing request took 2ms
+Result: null
+
+
+[Trace - 11:48:39 AM] Sending response 'client/registerCapability - (1)'. Processing request took 3ms
+Result: null
+
+
+[Trace - 11:48:39 AM] Received notification 'textDocument/publishDiagnostics'
+Params: {
+  "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs",
+  "diagnostics": [
+    {
+      "range": {
+        "start": {
+          "line": 6,
+          "character": 6
+        },
+        "end": {
+          "line": 6,
+          "character": 7
+        }
+      },
+      "severity": 2,
+      "source": "typecheck",
+      "message": "Defined but not used: ‘a’"
+    }
+  ]
+}
+
+
+[Trace - 11:48:40 AM] Sending request 'textDocument/codeAction - (2)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "range": {
+    "start": {
+      "line": 6,
+      "character": 6
+    },
+    "end": {
+      "line": 6,
+      "character": 7
+    }
+  },
+  "context": {
+    "diagnostics": [
+      {
+        "range": {
+          "start": {
+            "line": 6,
+            "character": 6
+          },
+          "end": {
+            "line": 6,
+            "character": 7
+          }
+        },
+        "severity": 2,
+        "source": "typecheck",
+        "message": "Defined but not used: ‘a’"
+      }
+    ]
+  }
+}
+
+
+[Trace - 11:48:41 AM] Received response 'textDocument/codeAction - (2)' in 279ms
+Result: []
+
+
+[Trace - 11:48:41 AM] Sending request 'textDocument/codeAction - (3)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "range": {
+    "start": {
+      "line": 6,
+      "character": 6
+    },
+    "end": {
+      "line": 6,
+      "character": 7
+    }
+  },
+  "context": {
+    "diagnostics": [
+      {
+        "range": {
+          "start": {
+            "line": 6,
+            "character": 6
+          },
+          "end": {
+            "line": 6,
+            "character": 7
+          }
+        },
+        "severity": 2,
+        "source": "typecheck",
+        "message": "Defined but not used: ‘a’"
+      }
+    ]
+  }
+}
+
+
+[Trace - 11:48:41 AM] Received response 'textDocument/codeAction - (3)' in 3ms
+Result: []
+
+
+[Trace - 11:48:43 AM] Sending request 'textDocument/codeAction - (4)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "range": {
+    "start": {
+      "line": 6,
+      "character": 6
+    },
+    "end": {
+      "line": 6,
+      "character": 7
+    }
+  },
+  "context": {
+    "diagnostics": [
+      {
+        "range": {
+          "start": {
+            "line": 6,
+            "character": 6
+          },
+          "end": {
+            "line": 6,
+            "character": 7
+          }
+        },
+        "severity": 2,
+        "source": "typecheck",
+        "message": "Defined but not used: ‘a’"
+      }
+    ]
+  }
+}
+
+
+[Trace - 11:48:43 AM] Received response 'textDocument/codeAction - (4)' in 4ms
+Result: []
+
+
+[Trace - 11:48:45 AM] Received request 'client/registerCapability - (4)'
+Params: {
+  "registrations": [
+    {
+      "id": "/home/lupusanay/caltime/backend/src/Lib.hs",
+      "method": "workspace/didChangeWatchedFiles",
+      "registerOptions": {
+        "watchers": [
+          {
+            "kind": 5,
+            "globPattern": "/home/lupusanay/caltime/backend/src/Lib.hs"
+          }
+        ]
+      }
+    }
+  ]
+}
+
+
+[Trace - 11:48:45 AM] Sending response 'client/registerCapability - (4)'. Processing request took 1ms
+Result: null
+
+
+[Trace - 11:48:46 AM] Sending request 'textDocument/hover - (5)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "position": {
+    "line": 7,
+    "character": 7
+  }
+}
+
+
+[Trace - 11:48:46 AM] Received response 'textDocument/hover - (5)' in 25ms
+Result: {
+  "contents": {
+    "kind": "markdown",
+    "value": "\n```haskell\nputStrLn :: forall (m :: * -\u003e *). MonadIO m \u003d\u003e [Char] -\u003e m ()\n```\n\n*Defined in ‘Relude.Lifted.Terminal’*\n\n\n*\t*\t*\n\n```haskell\n_ :: [Char] -\u003e IO ()\n```\n"
+  },
+  "range": {
+    "start": {
+      "line": 7,
+      "character": 2
+    },
+    "end": {
+      "line": 7,
+      "character": 10
+    }
+  }
+}
+
+
+[Trace - 11:48:46 AM] Sending request 'textDocument/hover - (6)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "position": {
+    "line": 6,
+    "character": 6
+  }
+}
+
+
+[Trace - 11:48:46 AM] Received response 'textDocument/hover - (6)' in 1ms
+Result: {
+  "contents": {
+    "kind": "markdown",
+    "value": "\n```haskell\na :: Char\n```\n\n*Defined at /home/lupusanay/caltime/backend/src/Lib.hs:7:7*\n\n\n"
+  },
+  "range": {
+    "start": {
+      "line": 6,
+      "character": 6
+    },
+    "end": {
+      "line": 6,
+      "character": 7
+    }
+  }
+}
+
+
+[Trace - 11:48:51 AM] Sending request 'textDocument/hover - (7)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "position": {
+    "line": 6,
+    "character": 9
+  }
+}
+
+
+[Trace - 11:48:51 AM] Received response 'textDocument/hover - (7)' in 1ms
+Result: {
+  "contents": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "range": {
+    "start": {
+      "line": 6,
+      "character": 8
+    },
+    "end": {
+      "line": 6,
+      "character": 44
+    }
+  }
+}
+
+
+[Trace - 11:48:54 AM] Sending request 'textDocument/hover - (8)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "position": {
+    "line": 7,
+    "character": 12
+  }
+}
+
+
+[Trace - 11:48:54 AM] Received response 'textDocument/hover - (8)' in 1ms
+Result: {
+  "contents": {
+    "kind": "markdown",
+    "value": "\n```haskell\n_ :: [Char]\n```\n"
+  },
+  "range": {
+    "start": {
+      "line": 7,
+      "character": 11
+    },
+    "end": {
+      "line": 7,
+      "character": 17
+    }
+  }
+}
+
+
+[Trace - 11:48:55 AM] Sending request 'textDocument/hover - (9)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "position": {
+    "line": 6,
+    "character": 11
+  }
+}
+
+
+[Trace - 11:48:55 AM] Received response 'textDocument/hover - (9)' in 2ms
+Result: {
+  "contents": {
+    "kind": "markdown",
+    "value": "\n```haskell\nhead :: forall (f :: * -\u003e *) a. IsNonEmpty f a a \"head\" \u003d\u003e f a -\u003e a\n```\n\n*Defined in ‘Relude.List.NonEmpty’*\n\n\n*\t*\t*\n\n```haskell\n_ :: NonEmpty Char -\u003e Char\n```\n"
+  },
+  "range": {
+    "start": {
+      "line": 6,
+      "character": 10
+    },
+    "end": {
+      "line": 6,
+      "character": 14
+    }
+  }
+}
+
+
+[Trace - 11:48:55 AM] Sending request 'textDocument/hover - (10)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "position": {
+    "line": 5,
+    "character": 13
+  }
+}
+
+
+[Trace - 11:48:55 AM] Received response 'textDocument/hover - (10)' in 1ms
+Result: {
+  "contents": {
+    "kind": "markdown",
+    "value": "\n```haskell\n_ :: IO ()\n```\n"
+  },
+  "range": {
+    "start": {
+      "line": 5,
+      "character": 11
+    },
+    "end": {
+      "line": 7,
+      "character": 17
+    }
+  }
+}
+
+
+[Trace - 11:53:26 AM] Sending request 'textDocument/codeAction - (11)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "range": {
+    "start": {
+      "line": 6,
+      "character": 6
+    },
+    "end": {
+      "line": 6,
+      "character": 7
+    }
+  },
+  "context": {
+    "diagnostics": [
+      {
+        "range": {
+          "start": {
+            "line": 6,
+            "character": 6
+          },
+          "end": {
+            "line": 6,
+            "character": 7
+          }
+        },
+        "severity": 2,
+        "source": "typecheck",
+        "message": "Defined but not used: ‘a’"
+      }
+    ]
+  }
+}
+
+
+[Trace - 11:53:26 AM] Received response 'textDocument/codeAction - (11)' in 130ms
+Result: []
+
+
+[Trace - 00:02:50 PM] Sending request 'textDocument/hover - (12)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "position": {
+    "line": 7,
+    "character": 12
+  }
+}
+
+
+[Trace - 00:02:50 PM] Received response 'textDocument/hover - (12)' in 2ms
+Result: {
+  "contents": {
+    "kind": "markdown",
+    "value": "\n```haskell\n_ :: [Char]\n```\n"
+  },
+  "range": {
+    "start": {
+      "line": 7,
+      "character": 11
+    },
+    "end": {
+      "line": 7,
+      "character": 17
+    }
+  }
+}
+
+
+[Trace - 00:02:50 PM] Sending request 'textDocument/codeAction - (13)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "range": {
+    "start": {
+      "line": 6,
+      "character": 6
+    },
+    "end": {
+      "line": 6,
+      "character": 7
+    }
+  },
+  "context": {
+    "diagnostics": [
+      {
+        "range": {
+          "start": {
+            "line": 6,
+            "character": 6
+          },
+          "end": {
+            "line": 6,
+            "character": 7
+          }
+        },
+        "severity": 2,
+        "source": "typecheck",
+        "message": "Defined but not used: ‘a’"
+      }
+    ]
+  }
+}
+
+
+[Trace - 00:02:50 PM] Received response 'textDocument/codeAction - (13)' in 3ms
+Result: []
+
+
+[Trace - 00:02:50 PM] Sending request 'textDocument/hover - (14)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "position": {
+    "line": 6,
+    "character": 13
+  }
+}
+
+
+[Trace - 00:02:50 PM] Received response 'textDocument/hover - (14)' in 1ms
+Result: {
+  "contents": {
+    "kind": "markdown",
+    "value": "\n```haskell\nhead :: forall (f :: * -\u003e *) a. IsNonEmpty f a a \"head\" \u003d\u003e f a -\u003e a\n```\n\n*Defined in ‘Relude.List.NonEmpty’*\n\n\n*\t*\t*\n\n```haskell\n_ :: NonEmpty Char -\u003e Char\n```\n"
+  },
+  "range": {
+    "start": {
+      "line": 6,
+      "character": 10
+    },
+    "end": {
+      "line": 6,
+      "character": 14
+    }
+  }
+}
+
+
+[Trace - 00:02:50 PM] Sending request 'textDocument/hover - (15)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "position": {
+    "line": 7,
+    "character": 11
+  }
+}
+
+
+[Trace - 00:02:50 PM] Received response 'textDocument/hover - (15)' in 1ms
+Result: {
+  "contents": {
+    "kind": "markdown",
+    "value": "\n```haskell\n_ :: [Char]\n```\n"
+  },
+  "range": {
+    "start": {
+      "line": 7,
+      "character": 11
+    },
+    "end": {
+      "line": 7,
+      "character": 17
+    }
+  }
+}
+
+
+[Trace - 00:02:50 PM] Sending request 'textDocument/hover - (16)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "position": {
+    "line": 7,
+    "character": 10
+  }
+}
+
+
+[Trace - 00:02:50 PM] Received response 'textDocument/hover - (16)' in 1ms
+Result: {
+  "contents": {
+    "kind": "markdown",
+    "value": "\n```haskell\nputStrLn :: forall (m :: * -\u003e *). MonadIO m \u003d\u003e [Char] -\u003e m ()\n```\n\n*Defined in ‘Relude.Lifted.Terminal’*\n\n\n*\t*\t*\n\n```haskell\n_ :: [Char] -\u003e IO ()\n```\n"
+  },
+  "range": {
+    "start": {
+      "line": 7,
+      "character": 2
+    },
+    "end": {
+      "line": 7,
+      "character": 10
+    }
+  }
+}
+
+
+[Trace - 00:03:05 PM] Sending request 'textDocument/codeAction - (17)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "range": {
+    "start": {
+      "line": 6,
+      "character": 6
+    },
+    "end": {
+      "line": 6,
+      "character": 7
+    }
+  },
+  "context": {
+    "diagnostics": [
+      {
+        "range": {
+          "start": {
+            "line": 6,
+            "character": 6
+          },
+          "end": {
+            "line": 6,
+            "character": 7
+          }
+        },
+        "severity": 2,
+        "source": "typecheck",
+        "message": "Defined but not used: ‘a’"
+      }
+    ]
+  }
+}
+
+
+[Trace - 00:03:05 PM] Received response 'textDocument/codeAction - (17)' in 3ms
+Result: []
+
+
+[Trace - 00:03:11 PM] Sending request 'textDocument/hover - (18)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "position": {
+    "line": 6,
+    "character": 44
+  }
+}
+
+
+[Trace - 00:03:11 PM] Received response 'textDocument/hover - (18)' in 1ms
+Result: {
+  "contents": {
+    "kind": "markdown",
+    "value": "\n```haskell\n_ :: [Char]\n```\n"
+  },
+  "range": {
+    "start": {
+      "line": 6,
+      "character": 29
+    },
+    "end": {
+      "line": 6,
+      "character": 44
+    }
+  }
+}
+
+
+[Trace - 00:03:12 PM] Sending request 'textDocument/hover - (19)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "position": {
+    "line": 4,
+    "character": 16
+  }
+}
+
+
+[Trace - 00:03:12 PM] Received response 'textDocument/hover - (19)' in 1ms
+Result: {
+  "contents": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "range": {
+    "start": {
+      "line": 4,
+      "character": 15
+    },
+    "end": {
+      "line": 4,
+      "character": 17
+    }
+  }
+}
+
+
+[Trace - 00:03:13 PM] Sending request 'textDocument/hover - (20)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "position": {
+    "line": 2,
+    "character": 10
+  }
+}
+
+
+[Trace - 00:03:13 PM] Received response 'textDocument/hover - (20)' in 1ms
+Result: {
+  "contents": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "range": {
+    "start": {
+      "line": 2,
+      "character": 0
+    },
+    "end": {
+      "line": 2,
+      "character": 41
+    }
+  }
+}
+
+
+[Trace - 00:03:17 PM] Sending request 'textDocument/hover - (21)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "position": {
+    "line": 6,
+    "character": 31
+  }
+}
+
+
+[Trace - 00:03:17 PM] Received response 'textDocument/hover - (21)' in 1ms
+Result: {
+  "contents": {
+    "kind": "markdown",
+    "value": "\n```haskell\n_ :: Char\n```\n"
+  },
+  "range": {
+    "start": {
+      "line": 6,
+      "character": 30
+    },
+    "end": {
+      "line": 6,
+      "character": 33
+    }
+  }
+}
+
+
+[Trace - 00:03:19 PM] Sending request 'textDocument/hover - (22)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "position": {
+    "line": 0,
+    "character": 1
+  }
+}
+
+
+[Trace - 00:03:19 PM] Received response 'textDocument/hover - (22)' in 1ms
+Result: null
+
+
+[Trace - 00:03:19 PM] Sending request 'textDocument/documentHighlight - (23)'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  },
+  "position": {
+    "line": 0,
+    "character": 1
+  }
+}
+
+
+[Trace - 00:03:19 PM] Received response 'textDocument/documentHighlight - (23)' in 2ms
+Result: []
+
+
+[Trace - 00:03:22 PM] Sending notification 'textDocument/didClose'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/src/Lib.hs"
+  }
+}
+
+
+[Trace - 00:03:22 PM] Sending notification 'textDocument/didClose'
+Params: {
+  "textDocument": {
+    "uri": "file:///home/lupusanay/caltime/backend/app/Main.hs"
+  }
+}
+
+
+[Trace - 00:03:22 PM] Sending request 'shutdown - (24)'
+Params: null
+
+
+[Trace - 00:03:22 PM] Received response 'shutdown - (24)' in 0ms
+Result: null
+
+

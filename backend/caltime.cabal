@@ -1,0 +1,55 @@
+cabal-version: 3.4
+name:                caltime
+version:             0.1.0.0
+description:           Please see the README on GitHub at <https://github.com/lupusanay/caltime#readme>
+homepage:            https://github.com/lupusanay/caltime#readme
+bug-reports:         https://github.com/lupusanay/caltime/issues
+license:             NONE
+build-type:          Simple
+author:              Ilya Kopeshtianski
+maintainer:          lupusanay@gmail.com
+copyright:           2020 Ilya Kopeshtianski
+
+source-repository head
+  type: git
+  location: https://github.com/lupusanay/caltime
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_caltime
+  build-depends:
+      base
+    , protolude
+    , time
+    , attoparsec
+  mixins:
+      base hiding (Prelude)
+    , protolude (Protolude as Prelude)
+    , protolude
+  hs-source-dirs:
+      src
+  default-extensions:
+    OverloadedStrings
+    ImportQualifiedPost
+    DeriveGeneric
+    TypeApplications
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -Wnoncanonical-monad-instances
+  default-language: Haskell2010
+
+executable caltime
+  main-is: Main.hs
+  other-modules:
+      Paths_caltime
+  build-depends:
+      base
+    , caltime
+    , conduit
+    , conduit-extra
+    , resourcet
+    , http-conduit
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -Wnoncanonical-monad-instances
+  default-language: Haskell2010
