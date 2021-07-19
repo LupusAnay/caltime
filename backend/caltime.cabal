@@ -1,14 +1,19 @@
-cabal-version: 3.4
-name:                caltime
-version:             0.1.0.0
-description:           Please see the README on GitHub at <https://github.com/lupusanay/caltime#readme>
-homepage:            https://github.com/lupusanay/caltime#readme
-bug-reports:         https://github.com/lupusanay/caltime/issues
-license:             NONE
-build-type:          Simple
-author:              Ilya Kopeshtianski
-maintainer:          lupusanay@gmail.com
-copyright:           2020 Ilya Kopeshtianski
+cabal-version: 3.0
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           caltime
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/lupusanay/caltime#readme>
+homepage:       https://github.com/lupusanay/caltime#readme
+bug-reports:    https://github.com/lupusanay/caltime/issues
+author:         Ilya Kopeshtianski
+maintainer:     lupusanay@gmail.com
+copyright:      2020 Ilya Kopeshtianski
+license:        NONE
+build-type:     Simple
 
 source-repository head
   type: git
@@ -16,40 +21,78 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      Caltime
+      Caltime.Parser
+      Caltime.Parser.Internal
+      Caltime.Parser.Internal.Model
   other-modules:
       Paths_caltime
-  build-depends:
-      base
-    , protolude
-    , time
-    , attoparsec
-  mixins:
-      base hiding (Prelude)
-    , protolude (Protolude as Prelude)
-    , protolude
   hs-source-dirs:
       src
   default-extensions:
-    OverloadedStrings
-    ImportQualifiedPost
-    DeriveGeneric
-    TypeApplications
+      OverloadedStrings
+      ImportQualifiedPost
+      DeriveGeneric
+      TypeApplications
   ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -Wnoncanonical-monad-instances
+  build-depends:
+      QuickCheck
+    , attoparsec
+    , base
+    , protolude
+    , time
+  mixins:
+      base hiding (Prelude)
+    , protolude (Protolude as Prelude)
   default-language: Haskell2010
 
 executable caltime
   main-is: Main.hs
   other-modules:
       Paths_caltime
-  build-depends:
-      base
-    , caltime
-    , conduit
-    , conduit-extra
-    , resourcet
-    , http-conduit
   hs-source-dirs:
       app
+  default-extensions:
+      OverloadedStrings
+      ImportQualifiedPost
+      DeriveGeneric
+      TypeApplications
   ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -Wnoncanonical-monad-instances
+  build-depends:
+      QuickCheck
+    , attoparsec
+    , base
+    , caltime
+    , protolude
+    , time
+  mixins:
+      base hiding (Prelude)
+    , protolude (Protolude as Prelude)
+  default-language: Haskell2010
+
+test-suite spec
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_caltime
+  hs-source-dirs:
+      test
+  default-extensions:
+      OverloadedStrings
+      ImportQualifiedPost
+      DeriveGeneric
+      TypeApplications
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -Wnoncanonical-monad-instances
+  build-depends:
+      HUnit
+    , QuickCheck
+    , attoparsec
+    , base
+    , caltime
+    , hspec
+    , protolude
+    , time
+  mixins:
+      base hiding (Prelude)
+    , protolude (Protolude as Prelude)
   default-language: Haskell2010

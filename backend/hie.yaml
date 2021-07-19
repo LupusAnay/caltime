@@ -1,6 +1,13 @@
 cradle:
-  multi:
-    - path: "./src"
-      config: { cradle: {cabal: {component: "lib:caltime"}} }
-    - path: "./app"
-      config: { cradle: {cabal: {component: "exe:caltime"}} }
+  cabal:
+    - path: "src"
+      component: "lib:caltime"
+
+    - path: "app/Main.hs"
+      component: "caltime:exe:caltime"
+
+    - path: "app/Paths_caltime.hs"
+      component: "caltime:exe:caltime"
+
+    - path: "test"
+      component: "caltime:test:spec"

@@ -1,4 +1,4 @@
-import Lib
+import Caltime
 
 main :: IO ()
-main = someFunc
+main = server
