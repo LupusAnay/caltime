@@ -34,6 +34,7 @@ library
       ImportQualifiedPost
       DeriveGeneric
       TypeApplications
+      LambdaCase
   ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -Wnoncanonical-monad-instances
   build-depends:
       QuickCheck
@@ -41,6 +42,7 @@ library
     , base
     , protolude
     , time
+    , quickcheck-instances
   mixins:
       base hiding (Prelude)
     , protolude (Protolude as Prelude)
@@ -92,6 +94,7 @@ test-suite spec
     , hspec
     , protolude
     , time
+    , quickcheck-instances
   mixins:
       base hiding (Prelude)
     , protolude (Protolude as Prelude)
