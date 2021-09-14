@@ -1,4 +1,5 @@
 dist-newstyle
 package.yaml
 caltime.code-workspace
+lsp
 *.local
